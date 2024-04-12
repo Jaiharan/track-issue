@@ -16,4 +16,5 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-weight: 500;
 }
