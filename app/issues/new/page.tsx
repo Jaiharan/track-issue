@@ -9,21 +9,28 @@ import "easymde/dist/easymde.min.css";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { createIssueSchema } from "@/app/validationSchemas";
-import z from 'zod';
+import z from "zod";
 
-type IssueForm = z.infer<typeof createIssueSchema>
+type IssueForm = z.infer<typeof createIssueSchema>;
 
 const NewIssuePage = () => {
   const router = useRouter();
-  const { register, control, handleSubmit, formState: { errors } } = useForm<IssueForm>({
+  const {
+    register,
+    control,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<IssueForm>({
     resolver: zodResolver(createIssueSchema),
   });
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   return (
     <div className=" max-w-xl">
-      {error && <Callout.Root color="red" className=" mb-5">
-        <Callout.Text>{error}</Callout.Text>
-      </Callout.Root>}
+      {error && (
+        <Callout.Root color="red" className=" mb-5">
+          <Callout.Text>{error}</Callout.Text>
+        </Callout.Root>
+      )}
       <form
         className=" max-w-xl space-y-3"
         onSubmit={handleSubmit(async (data) => {
@@ -31,7 +38,7 @@ const NewIssuePage = () => {
             await axios.post("/api/issues", data);
             router.push("/issues");
           } catch (error) {
-            setError('An unexpected error occurred');
+            setError("An unexpected error occurred");
           }
         })}
       >
@@ -47,7 +54,9 @@ const NewIssuePage = () => {
             <SimpleMDE placeholder="Description" {...field} />
           )}
         />
-        {errors.description && <p className="text-red-500">{errors.description.message}</p>}
+        {errors.description && (
+          <p className="text-red-500">{errors.description.message}</p>
+        )}
         <Button>Submit New Issue</Button>
       </form>
     </div>
