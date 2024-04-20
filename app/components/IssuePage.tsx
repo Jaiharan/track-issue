@@ -35,16 +35,21 @@ function IssuePage() {
   };
 
   return (
-    <div>
+    <div className=" transition-all ease-in duration-150">
       {error && <p>{error}</p>}
-      <div className=" flex justify-center items-center">
-        {isLoading && <Spinner color={"black"}/>}
-      </div>
       <div className=" w-full p-3">
-        <h2 className=" text-2xl flex justify-center items-center p-2 font-semibold gap-3">Issues</h2>
-        {issues.map((issue) => (
-          <Issue key={issue.id} issue={issue} />
-        ))}
+        <h2 className=" text-2xl flex justify-center items-center p-2 font-semibold gap-3">
+          Issues
+        </h2>
+        {isLoading ? (
+          <div className=" flex justify-center items-center">
+            {isLoading && <Spinner color={"black"} />}
+          </div>
+        ) : (
+          issues.map((issue) => (
+            <Issue key={issue.id} issue={issue} index={issues.indexOf(issue)} />
+          ))
+        )}
       </div>
     </div>
   );
