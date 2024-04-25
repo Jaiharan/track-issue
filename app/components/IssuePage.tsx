@@ -28,7 +28,7 @@ function IssuePage() {
       const data = await res.json();
       setIssues(data);
     } catch (error) {
-      setError("An unexpected error occurred");
+      setError("An unexpected error occurred in API");
     } finally {
       setIsLoading(false); // Set isLoading to false regardless of success or error
     }
