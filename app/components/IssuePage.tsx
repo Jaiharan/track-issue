@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import Issue from "./Issue";
 import Spinner from "./Spinner";
@@ -10,6 +9,7 @@ type IssueType = {
   id: number;
   title: string;
   description: string;
+  status: string;
 };
 
 function IssuePage() {
@@ -30,7 +30,9 @@ function IssuePage() {
     } catch (error) {
       setError("An unexpected error occurred in API");
     } finally {
-      setIsLoading(false); // Set isLoading to false regardless of success or error
+      setTimeout(() => {
+        setIsLoading(false); // Set isLoading to false regardless of success or error
+      }, 500);
     }
   };
 
