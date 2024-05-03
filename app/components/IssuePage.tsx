@@ -40,11 +40,11 @@ function IssuePage() {
     <div className=" transition-all ease-in duration-150">
       {error && <p>{error}</p>}
       <div className=" w-full p-3">
-        <h2 className=" text-2xl flex justify-center items-center p-2 font-semibold gap-3">
+        <h2 className=" text-3xl flex justify-center items-center p-2 font-semibold gap-3">
           Issues
         </h2>
         {isLoading ? (
-          <div className=" flex justify-center items-center">
+          <div className=" flex justify-center items-center p-2">
             {isLoading && <Spinner color={"black"} />}
           </div>
         ) : (

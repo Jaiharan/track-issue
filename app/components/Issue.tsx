@@ -43,7 +43,7 @@ const Issue = ({ issue, index }: { issue: IssueType; index: number }) => {
   return (
     <div className="flex items-start m-4 p-4 rounded-md border border-zinc-900 shadow-lg mb-5 bg-zinc-100">
       <div className="flex flex-row items-center">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 p-2">
           <FaCircle
             className={classnames({
               "text-green-600": status === "OPEN",
