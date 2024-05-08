@@ -22,3 +22,7 @@ body {
   color: rgb(var(--foreground-rgb));
   font-weight: 500;
 }
+
+h2 {
+  @apply text-3xl flex justify-center items-center p-2 font-semibold gap-3
+}
