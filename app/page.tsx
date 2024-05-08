@@ -9,7 +9,7 @@ import {
   Title,
   Tooltip,
   Legend,
-  ChartOptions
+  ChartOptions,
 } from "chart.js";
 import { useEffect, useState } from "react";
 import { Bar } from "react-chartjs-2";
@@ -31,34 +31,33 @@ export default function Home() {
     getIssues();
   }, []);
 
-  const options: ChartOptions<'bar'> = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
     layout: {
-        padding: {
-            left: 20,   // Adjust left padding
-            right: 20,  // Adjust right padding
-            top: 20,    // Adjust top padding
-            bottom: 20, // Adjust bottom padding
-        },
+      padding: {
+        left: 20, // Adjust left padding
+        right: 20, // Adjust right padding
+        top: 20, // Adjust top padding
+        bottom: 20, // Adjust bottom padding
+      },
     },
     scales: {
-        x: {
-            display: true,
-            title: {
-                display: true,
-                text: 'Status',
-            },
+      x: {
+        display: true,
+        title: {
+          display: true,
+          text: "Status",
         },
-        y: {
-            display: true,
-            title: {
-                display: true,
-                text: 'Count',
-            },
+      },
+      y: {
+        display: true,
+        title: {
+          display: true,
+          text: "Count",
         },
+      },
     },
-};
-
+  };
 
   Chart.register(
     CategoryScale,
