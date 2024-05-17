@@ -1,41 +1,58 @@
-This project mainly focus on Tracking Issues and to Understand NextJs
+# Track Issue
 
-## Getting Started
-1) First clone this repo:
+## Overview
 
-```bash
-git clone https://github.com/Jaiharan/track-issue.git
-```
+Track Issue is a project management tool designed to help teams track and manage issues effectively. This tool provides functionalities to create, update, and monitor issues throughout their lifecycle.
 
-2) Set .env file. Provide its Credentials.
+## Features
 
-3) Install Required Packages:
+- **Issue Creation**: Easily create new issues with detailed descriptions.
+- **Issue Management**: Update issue status, assign issues to team members, and set priorities.
+- **Notifications**: Get notifications for issue updates and assignments.
+- **Search and Filter**: Search for issues by keywords and filter them by status, priority, or assignee.
+- **User Management**: Manage user roles and permissions.
 
-```bash
-npm install
-```
+## Installation
 
-4) Now run the development server:
+To get started with Track Issue, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Jaiharan/track-issue.git
+   cd track-issue
+   ```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
+3. **Set Up Environment Variables**
+   ```
+   DATABASE_URL=your_database_url
+   PORT=your_port
+   ```
+4. **Run the Application**
+   ```
+   npm start
+   ```
+## Usage
+  **Creating an Issue**
+    -Navigate to the Issues section.
+    -Click on "Create New Issue".
+    -Fill in the issue details (title, description, priority, assignee).
+    -Click "Submit".
+  **Updating an Issue**
+    -Select the issue you want to update.
+    -Modify the necessary fields.
+    -Click "Update".
+    -Managing Users
+    -Navigate to the User Management section.
+    -Add or remove users.
+    -Assign roles and permissions.
+## Contributing
+  We welcome contributions! Please follow these steps to contribute:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Fork the repository.
+Create a new branch (git checkout -b feature/your-feature-name).
+Commit your changes (git commit -m 'Add some feature').
+Push to the branch (git push origin feature/your-feature-name).
+Open a pull request.
