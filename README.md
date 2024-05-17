@@ -36,18 +36,18 @@ To get started with Track Issue, follow these steps:
    ```
 ## Usage
   **Creating an Issue**
-    -Navigate to the Issues section.
-    -Click on "Create New Issue".
-    -Fill in the issue details (title, description, priority, assignee).
-    -Click "Submit".
+    - Navigate to the Issues section.
+    - Click on "Create New Issue".
+    - Fill in the issue details (title, description, priority, assignee).
+    - Click "Submit".
   **Updating an Issue**
-    -Select the issue you want to update.
-    -Modify the necessary fields.
-    -Click "Update".
-    -Managing Users
-    -Navigate to the User Management section.
-    -Add or remove users.
-    -Assign roles and permissions.
+    - Select the issue you want to update.
+    - Modify the necessary fields.
+    - Click "Update".
+    - Managing Users
+    - Navigate to the User Management section.
+    - Add or remove users.
+    - Assign roles and permissions.
 ## Contributing
   We welcome contributions! Please follow these steps to contribute:
 
