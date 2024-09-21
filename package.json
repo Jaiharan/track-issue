@@ -22,7 +22,7 @@
     "easymde": "^2.18.0",
     "eslint": "9.0.0",
     "eslint-config-next": "14.2.0",
-    "next": "14.2.0",
+    "next": "14.2.10",
     "postcss": "8.4.38",
     "prisma": "^5.3.1",
     "react": "18.2.0",
